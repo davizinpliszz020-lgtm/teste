@@ -1,0 +1,107 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #21170f url("https://img.magnific.com/fotos-premium/uma-mesa-de-madeira-escura-vazia-em-frente-a-um-fundo-bokeh-borrado-abstrato-do-restaurante-pode-ser-usada-para_1319275-794.jpg?semt=ais_hybrid&w=740&q=80") center/cover fixed no-repeat;
+    overflow-x: hidden;
+}
+.grid1 { width: 100%; }
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 28px;
+    width: 100%;
+    padding: 22px 18px;
+    background: rgba(0,0,0,.82);
+    border-bottom: 2px solid #ffc52f;
+}
+.menu a {
+    color: bisque;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu a:hover { color: #ffc52f; }
+.grid2 {
+    max-width: 1100px;
+    margin: 42px auto 26px;
+    padding: 0 22px;
+    text-align: center;
+}
+.titulo1 h1 {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.15;
+    text-shadow: 0 3px 12px rgba(0,0,0,.8);
+}
+.grid3 {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 22px;
+}
+.caixa {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+.card1, .card2, .card3 {
+    min-width: 0;
+    min-height: 220px;
+    display: flex;
+    align-items: stretch;
+    padding: 24px;
+    border: 2px solid rgba(255,197,47,.8);
+    border-radius: 22px;
+    background: rgba(0,0,0,.78);
+    box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+.caixa1, .caixa2, .caixa3 {
+    width: 100%;
+    align-self: center;
+}
+.caixa h1 {
+    color: #ffc52f;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.caixa p, .caixa3 {
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.6;
+}
+.rodape-pag3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    padding: 18px 14px;
+    background: rgba(0,0,0,.86);
+}
+.rodape-pag3 a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.rodape-pag3 a:hover { color: #ffc52f; }
+@media (max-width: 800px) {
+    .caixa { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    body { background-attachment: scroll; }
+    .menu { gap: 12px 16px; padding: 15px 10px; }
+    .menu a { font-size: 16px; }
+    .grid2 { margin: 30px auto 22px; padding: 0 14px; }
+    .titulo1 h1 { font-size: 32px; }
+    .grid3 { padding: 0 14px; }
+    .caixa { grid-template-columns: 1fr; gap: 16px; }
+    .card1, .card2, .card3 { min-height: 0; padding: 20px; }
+    .caixa h1 { font-size: 23px; }
+    .caixa p, .caixa3 { font-size: 16px; }
+    .rodape-pag3 { gap: 14px 18px; }
+    .rodape-pag3 a, .rodape-pag3 .contact-toggle { font-size: 16px; }
+}
